@@ -58,8 +58,9 @@ class DragonTest < ActiveSupport::TestCase
     # use your knowledge of factories to make this test pass!
     # Note: you'll need to do more than just supply the right names...
     # Hint: you can pass variables as properties too, not just strings!
-    rider = nil
-    dragon = nil
+    rider = (build(:rider , name: "Aegon")) #rider is the variable they wanted me to pass
+    #  -saved as a local variable.
+    dragon = (build(:dragon , age:200 , name:"Balerion", rider: rider ))
 
     # not allowed to change the assert statement!
     skip unless rider && dragon
